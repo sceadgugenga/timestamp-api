@@ -22,13 +22,14 @@ function parseDate(mydate) {
 	
 	
 	var date = new Date(mydate)
-	if (date != 'Invalid Date') {
+	
+	if (date != 'Invalid Date' && date != null) {
 		return {'unix': date.getTime()/1000, 'natural': mydate }
 		//console.log(date)
 	} else {
 	// set date using milliseconds
 	date.setTime(mydate*1000)
-		if (date != 'Invalid Date') {
+		if (date != 'Invalid Date'  && date != null) {
 			var myYear = date.getFullYear()
 	var myMonth = date.getMonth()
 	var myDay = date.getDate()
